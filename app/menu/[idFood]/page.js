@@ -11,7 +11,7 @@ export async function getDataFood(idFood) {
   return res.json();
 }
 export async function generateStaticParams() {
-  const res = await fetch("http://localhost:4000/data",{nex:{ revalidate: 10 },}).then((res) =>
+  const res = await fetch("http://localhost:4000/data").then((res) =>
     res.json()
   );
   return res.map((foodId) => ({
