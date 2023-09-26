@@ -7,8 +7,8 @@ const Navbar = () => {
        <Link className="text-lg text-[#53c60b]" href="/">EliFood</Link>
       </div>
       <div className="text-slate-500">
-        <Link href="/" className="mx-4" >Menu</Link>
-        <Link href="/" className="mx-1" >Categories</Link>
+        <Link href="/menu" className="mx-4" >Menu</Link>
+        <Link href="/categories" className="mx-1" >Categories</Link>
       </div>
     </header>
   );
