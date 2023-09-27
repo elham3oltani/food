@@ -52,7 +52,7 @@ export default async function page({ searchParams }) {
 }
 
 async function getDataFromQuery() {
-  const res = await fetch("http://localhost:4000/data");
+  const res = await fetch(`${process.env.BASE_URL }/data`);
   const data = res.json();
   return data;
 }

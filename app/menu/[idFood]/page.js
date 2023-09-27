@@ -7,11 +7,11 @@ export default async function Detail({ params: { idFood } }) {
 }
 
 export async function getDataFood(idFood) {
-  const res = await fetch(`http://localhost:4000/data/${idFood}`);
+  const res = await fetch(`${process.env.BASE_URL }/data/${idFood}`);
   return res.json();
 }
 export async function generateStaticParams() {
-  const res = await fetch("http://localhost:4000/data").then((res) =>
+  const res = await fetch(`${process.env.BASE_URL }/data`).then((res) =>
     res.json()
   );
   return res.map((foodId) => ({

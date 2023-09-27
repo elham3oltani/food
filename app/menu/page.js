@@ -7,7 +7,7 @@ export default async function page() {
 }
 
 export async function getData() {
-  const res = await fetch("http://localhost:4000/data", {
+  const res = await fetch(`${process.env.BASE_URL }/data`, {
     nex: { revalidate: 10 },
   });
   const data = res.json();
