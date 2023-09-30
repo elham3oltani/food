@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="flex my-28">
-      <div>
+    <div className="flex lg:my-28 my-10 flex-col-reverse">
+      <div className="mx-auto">
         <h1 className="border-b-2 my-6 text-2xl font-bold w-fit text-[#53c60b]">
           EliFood
         </h1>
@@ -21,7 +21,7 @@ const Banner = () => {
        
       </div>
       <div>
-        <img src="/images/banner.png" className="w-[800px]" alt="banner" />
+        <img src="/images/banner.png" className="w-[500px] mx-auto" alt="banner" />
       </div>
     </div>
   );

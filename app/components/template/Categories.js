@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Card from "../modules/Card";
 const Categories = ({data}) => {
@@ -22,17 +22,17 @@ const Categories = ({data}) => {
   };
 
   return (
-    <div className="m-auto mt-[100px] my-20">
-      <h2 className="border-b-4 border-[#53c60b] font-bold w-fit mb-[50px] text-2xl">
+    <div className="mx-auto my-16">
+      <h2 className="border-b-4 border-[#53c60b] ml-3 font-bold w-fit mb-[50px] text-2xl">
         Categories
       </h2>
       <div>
-        <div>
+        <div className="flex-col lg:ml-3">
           <select
             value={query.difficulty}
             onChange={changeHandler}
             name="difficulty"
-            className="border w-[150px] text-sm h-[40px] rounded-md px-1 text-[#48ac0a] shadow-lg"
+            className="border lg:w-[150px] text-sm mr-6  w-full h-[40px] lg:h-[40px] lg:mb-0 rounded-md px-1 mx-auto mb-2 text-[#48ac0a] shadow-lg"
           >
             <option value="">Difficulty</option>
             <option value="Easy">Easy</option>
@@ -43,7 +43,7 @@ const Categories = ({data}) => {
             value={query.time}
             onChange={changeHandler}
             name="time"
-            className="border w-[150px] h-[40px] text-sm rounded-md px-1 mx-6 text-[#48ac0a] shadow-lg"
+            className="border lg:w-[150px] w-full lg:h-[40px] h-[40px] text-sm mx-auto mb-2 rounded-md px-1  text-[#48ac0a] shadow-lg"
           >
             <option value="">Cooking Time</option>
             <option value="more">More Than 30 Min</option>
@@ -51,13 +51,13 @@ const Categories = ({data}) => {
           </select>
           <button
             onClick={queryHandler}
-            className="border-none py-1.5 px-4 bg-[#53c60b] text-white rounded-md cursor-pointer"
+            className="border-none h-[38px] outline-none lg:w-fit w-full py-1.5 px-4 lg:mx-4  bg-[#53c60b] text-white rounded-md cursor-pointer"
           >
             Search
           </button>
         </div>
       </div>
-      <div className="mt-10 flex flex-wrap items-center justify-between w-full">
+      <div className="mt-10 flex flex-wrap items-center justify-between mx-auto">
       {!data.length ? (
             <img src="/images/search.png" alt="Category" className="w-[250px] mx-auto mt-8" />
           ) : null}

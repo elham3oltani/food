@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between items-center py-4">
+    <header className="flex justify-between items-center mx-auto py-4">
       <div>
-       <Link className="text-lg text-[#53c60b]" href="/">EliFood</Link>
+       <Link className="text-lg ml-4 text-[#53c60b]" href="/">EliFood</Link>
       </div>
       <div className="text-slate-500">
         <Link href="/menu" className="mx-4" >Menu</Link>

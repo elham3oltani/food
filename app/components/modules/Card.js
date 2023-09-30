@@ -7,7 +7,7 @@ const Card = (props) => {
   const { id, name, details, price, discount } = props;
 
   return (
-    <div className="flex flex-col w-[270px] shadow-lg mb-10 rounded-md relative ">
+    <div className="flex flex-col w-[270px] shadow-lg mb-10 rounded-md relative mx-auto ">
       <img
         src={`/images/${id}.jpeg`}
         alt={name}
